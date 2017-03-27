@@ -5,14 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        //primaryStage.initStyle(StageStyle.UNDECORATED);
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/loginregisterform.fxml"));
+        root.getStylesheets().add(getClass().getResource("CSS/custom.css").toExternalForm());
+        primaryStage.setTitle("Login Screen");
+        primaryStage.setScene(new Scene(root, 400, 600));
         primaryStage.show();
     }
 
