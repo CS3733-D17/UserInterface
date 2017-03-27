@@ -6,6 +6,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -27,9 +28,14 @@
       </AnchorPane>
       <AnchorPane prefHeight="100.0" prefWidth="400.0">
          <children>
+            <ToggleButton fx:id="logInButton" layoutX="200.0" layoutY="35.0" mnemonicParsing="false" onAction="#bye" prefWidth="120.0" styleClass="last" text="Log In">
+               <toggleGroup>
+                  <ToggleGroup fx:id="signType" />
+               </toggleGroup></ToggleButton>
+            <ToggleButton fx:id="signUpButton" layoutX="80.0" layoutY="35.0" mnemonicParsing="false" onAction="#hello" prefWidth="120.0" selected="true" styleClass="first" text="SIgn Up" toggleGroup="$signType" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="350.0" prefWidth="400.0">
+      <AnchorPane fx:id="signUpPane" prefHeight="350.0" prefWidth="400.0" visible="true">
          <children>
             <HBox layoutX="50.0" layoutY="50.0" prefHeight="30.0" prefWidth="300.0">
                <children>
@@ -80,7 +86,7 @@
              <Button layoutX="140.0" layoutY="260.0" mnemonicParsing="false" prefWidth="120.0" text="Get Started" />
          </children>
       </AnchorPane>
-       <AnchorPane prefHeight="350.0" prefWidth="400.0" visible="false">
+       <AnchorPane fx:id="logInPane" prefHeight="350.0" prefWidth="400.0" visible="false">
            <children>
 
                <HBox layoutX="50.0" layoutY="100.0" prefHeight="30.0" prefWidth="300.0">

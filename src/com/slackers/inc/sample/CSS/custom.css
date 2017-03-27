@@ -1,5 +1,6 @@
 .root {
     -main-color: #ab4642;
+    -hint-color: rgb(150.0, 150.0, 150.0);
     -fx-text-base-color: rgb(252.0, 240.0, 237.0);
     -fx-body-color: #DCDCDC;
     -fx-outer-border: #cecece;
@@ -19,6 +20,10 @@
 
 .button{
     -fx-background-color: -main-color;
+}
+
+.toggle-button{
+    -fx-background-color: -hint-color;
 }
 
 .toggle-button:focused {
