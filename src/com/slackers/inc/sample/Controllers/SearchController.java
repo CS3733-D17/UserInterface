@@ -1,4 +1,4 @@
-package com.slackers.inc.sample;
+package com.slackers.inc.sample.Controllers;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
