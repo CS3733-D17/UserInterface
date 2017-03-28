@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.controlsfx.glyphfont.Glyph?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.slackers.inc.sample.Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.slackers.inc.sample.Controllers.LoginController">
    <children>
       <AnchorPane prefHeight="150.0" prefWidth="400.0" style="-fx-background-color: -main-color;">
          <children>
@@ -28,11 +28,11 @@
       </AnchorPane>
       <AnchorPane prefHeight="65.0" prefWidth="400.0">
          <children>
-            <ToggleButton fx:id="logInButton" layoutX="200.0" layoutY="35.0" mnemonicParsing="false" onAction="#logInClick" prefWidth="120.0" styleClass="last" text="Log In">
+            <ToggleButton fx:id="logInButton" layoutX="200.0" layoutY="35.0" mnemonicParsing="false" onAction="#logInToggle" prefWidth="120.0" styleClass="last" text="Log In">
                <toggleGroup>
                   <ToggleGroup fx:id="signType" />
                </toggleGroup></ToggleButton>
-            <ToggleButton fx:id="signUpButton" layoutX="80.0" layoutY="35.0" mnemonicParsing="false" onAction="#signUpClick" prefWidth="120.0" selected="true" styleClass="first" text="SIgn Up" toggleGroup="$signType" />
+            <ToggleButton fx:id="signUpButton" layoutX="80.0" layoutY="35.0" mnemonicParsing="false" onAction="#signUpToggle" prefWidth="120.0" selected="true" styleClass="first" text="SIgn Up" toggleGroup="$signType" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="signUpPane" prefHeight="350.0" prefWidth="400.0" visible="true">
@@ -44,8 +44,8 @@
                          <Glyph fontFamily="FontAwesome" icon="USER" prefHeight="30.0" prefWidth="30.0" styleClass="logo" />
                      </graphic>
                   </Label>
-                   <TextField prefHeight="28.0" prefWidth="135.0" promptText="First Name" styleClass="middle" />
-                   <TextField prefHeight="28.0" prefWidth="135.0" promptText="Last Name" styleClass="last" />
+                   <TextField fx:id="firstNameField" prefHeight="28.0" prefWidth="135.0" promptText="First Name" styleClass="middle" />
+                   <TextField fx:id="lastNameField" prefHeight="28.0" prefWidth="135.0" promptText="Last Name" styleClass="last" />
                </children>
             </HBox>
             <HBox layoutX="50.0" layoutY="100.0" prefHeight="30.0" prefWidth="300.0">
@@ -55,7 +55,7 @@
                            <Glyph fontFamily="FontAwesome" icon="ENVELOPE" layoutX="45.0" layoutY="100.0" prefHeight="30.0" prefWidth="30.0" styleClass="logo" />
                        </graphic>
                    </Label>
-                   <TextField prefHeight="28.0" prefWidth="270.0" promptText="Email Address" styleClass="last" />
+                   <TextField fx:id="emailField" prefHeight="28.0" prefWidth="270.0" promptText="Email Address" styleClass="last" />
                </children>
             </HBox>
             <HBox layoutX="50.0" layoutY="150.0" prefHeight="30.0" prefWidth="300.0">
@@ -66,7 +66,7 @@
                            <Glyph fontFamily="FontAwesome" icon="GEAR" layoutX="45.0" layoutY="150.0" prefHeight="30.0" prefWidth="30.0" styleClass="logo" />
                        </graphic>
                    </Label>
-                   <PasswordField prefHeight="28.0" prefWidth="270.0" promptText="Password" styleClass="last" />
+                   <PasswordField fx:id="passwordField" prefHeight="28.0" prefWidth="270.0" promptText="Password" styleClass="last" />
                </children>
             </HBox>
 
@@ -83,7 +83,7 @@
                   <Insets left="30.0" right="30.0" />
                </padding>
             </HBox>
-             <Button layoutX="140.0" layoutY="260.0" mnemonicParsing="false" prefWidth="120.0" text="Get Started" />
+             <Button layoutX="140.0" layoutY="260.0" mnemonicParsing="false" onAction="#getStartedClick" prefWidth="120.0" text="Get Started" />
          </children>
       </AnchorPane>
        <AnchorPane fx:id="logInPane" prefHeight="350.0" prefWidth="400.0" visible="false">
@@ -96,7 +96,7 @@
                                <Glyph fontFamily="FontAwesome" icon="ENVELOPE" layoutX="45.0" layoutY="50.0" prefHeight="30.0" prefWidth="30.0" styleClass="logo" />
                            </graphic>
                        </Label>
-                       <TextField prefHeight="28.0" prefWidth="270.0" promptText="Email Address" styleClass="last" />
+                       <TextField fx:id="loginEmailField" prefHeight="28.0" prefWidth="270.0" promptText="Email Address" styleClass="last" />
                    </children>
                </HBox>
                <HBox layoutX="50.0" layoutY="100.0" prefHeight="30.0" prefWidth="300.0">
@@ -107,10 +107,10 @@
                                <Glyph fontFamily="FontAwesome" icon="GEAR" layoutX="45.0" layoutY="100.0" prefHeight="30.0" prefWidth="30.0" styleClass="logo" />
                            </graphic>
                        </Label>
-                       <PasswordField prefHeight="28.0" prefWidth="270.0" promptText="Password" styleClass="last" />
+                       <PasswordField fx:id="loginPasswordField" prefHeight="28.0" prefWidth="270.0" promptText="Password" styleClass="last" />
                    </children>
                </HBox>
-               <Button layoutX="140.0" layoutY="260.0" mnemonicParsing="false" prefWidth="120.0" text="Log In" />
+               <Button layoutX="140.0" layoutY="260.0" mnemonicParsing="false" onAction="#logInClick" prefWidth="120.0" text="Log In" />
            </children>
        </AnchorPane>
    </children>

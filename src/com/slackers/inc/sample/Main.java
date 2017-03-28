@@ -8,14 +8,19 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    Parent login;
+    Stage stage;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        //primaryStage.initStyle(StageStyle.UNDECORATED);
-        Parent root = FXMLLoader.load(getClass().getResource("FXML/loginregisterform.fxml"));
-        root.getStylesheets().add(getClass().getResource("CSS/custom.css").toExternalForm());
-        primaryStage.setTitle("Login Screen");
-        primaryStage.setScene(new Scene(root, 400, 600));
-        primaryStage.show();
+        login = FXMLLoader.load(getClass().getResource("FXML/loginregisterform.fxml"));
+        String cssDoc = getClass().getResource("CSS/custom.css").toExternalForm();
+        login.getStylesheets().add(cssDoc);
+
+        stage = primaryStage;
+        stage.setTitle("Login Screen");
+        stage.setScene(new Scene(login));
+        stage.show();
     }
 
 
