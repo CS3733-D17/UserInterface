@@ -91,12 +91,21 @@
     -fx-padding: 0 8 0 8;
 }
 
+.sidebarbutton{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: rgb(56,56,56);
+    -fx-pref-height: 60;
+    -fx-min-width: 60;
+}
+
 .sideicons{
     -fx-text-fill: white;
     -fx-font-family: "FontAwesome";
     -fx-font-size: 26;
-    -fx-padding: 30 17 30 17;
+    -fx-padding: 0 5 0 5;
 }
+
 
  /* RadioButton
  ******************************************************************************/

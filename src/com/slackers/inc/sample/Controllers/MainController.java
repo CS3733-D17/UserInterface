@@ -14,20 +14,38 @@ import java.util.ResourceBundle;
 
 
 public class MainController implements Initializable{
-    @FXML
-    private AnchorPane mainContainer;
+
+    @FXML private AnchorPane mainContainer;
+    @FXML private Pane search;
+    @FXML private Pane applications;
+    @FXML private Pane form;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            Pane search = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/search.fxml"));
-            Pane applications = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/applications.fxml"));
-            Pane form = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/form.fxml"));
+            search = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/search.fxml"));
+            applications = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/applications.fxml"));
+            form = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/form.fxml"));
 
-            mainContainer.getChildren().setAll(form);
+            mainContainer.getChildren().setAll(applications);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void applicationClick(){
+        mainContainer.getChildren().setAll(applications);
+    }
+
+    @FXML
+    private void searchClick(){
+        mainContainer.getChildren().setAll(search);
+    }
+
+    @FXML
+    private void settingsClick(){
+        mainContainer.getChildren().setAll(form);
     }
 
 
