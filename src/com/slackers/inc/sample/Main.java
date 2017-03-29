@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        login = FXMLLoader.load(getClass().getResource("FXML/loginregisterform.fxml"));
+        login = FXMLLoader.load(getClass().getResource("FXML/results.fxml"));
         String cssDoc = getClass().getResource("CSS/custom.css").toExternalForm();
         login.getStylesheets().add(cssDoc);
 
