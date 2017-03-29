@@ -11,20 +11,21 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * Created by SrinuL on 3/28/17.
- */
+
 public class MainController implements Initializable{
     @FXML
-    AnchorPane mainContainer;
+    private AnchorPane mainContainer;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println("This works");
 
         try {
-            Pane root = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/search.fxml"));
-            mainContainer.getChildren().setAll(root);
+            Pane search = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/search.fxml"));
+            Pane applications = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/applications.fxml"));
+            Pane form = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/form.fxml"));
+
+            mainContainer.getChildren().setAll(applications);
         } catch (IOException e) {
             e.printStackTrace();
         }
