@@ -17,6 +17,7 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable{
 
     @FXML private AnchorPane mainContainer;
+    @FXML private AnchorPane results;
     @FXML private AnchorPane search;
     @FXML private AnchorPane applications;
     @FXML private AnchorPane form;
@@ -28,6 +29,7 @@ public class MainController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println("This is the main controller. Success!");
         try {
+            results = FXMLLoader.load(getClass().getResource("../FXML/results.fxml"));
             applications = FXMLLoader.load(getClass().getResource("../FXML/applications.fxml"));
             form =  FXMLLoader.load(getClass().getResource("../FXML/form.fxml"));
 
@@ -57,6 +59,9 @@ public class MainController implements Initializable{
         mainContainer.getChildren().setAll(form);
     }
 
+    public void  resultsClick(){
+        mainContainer.getChildren().setAll(results);
+    }
 
 
 

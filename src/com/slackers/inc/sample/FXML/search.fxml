@@ -42,7 +42,7 @@
                         </ComboBox>
                        <Label layoutX="24.0" layoutY="318.0" text="Filter Words" />
                        <TextField layoutX="25.0" layoutY="347.0" opacity="0.5" text="Keyword Filter" />
-                       <Button layoutX="25.0" layoutY="516.0" mnemonicParsing="false" text="Search" />
+                       <Button layoutX="25.0" layoutY="516.0"  onAction="#getResultsClick" mnemonicParsing="false" text="Search" />
                    </children>
                </AnchorPane>
                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
