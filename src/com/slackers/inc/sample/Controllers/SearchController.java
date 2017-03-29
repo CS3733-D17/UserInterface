@@ -3,40 +3,42 @@ package com.slackers.inc.sample.Controllers;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-/**
- * Created by Jason on 3/27/2017.
- */
-public class SearchController {
 
-    ObservableList<String> typeList = FXCollections.observableArrayList("All", "Beer", "Wine", "Hard Alcohol");
-    ObservableList<String> contentList = FXCollections.observableArrayList("All", "20 <", "21-50", "51 >");
-    ObservableList<String> pastList = FXCollections.observableArrayList("Vodka", "Gin", "Tequila", "Rum", "Mixers");
-    ObservableList<String> currentList = FXCollections.observableArrayList("Sweet", "Dry", "Coconut", "cherry");
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class SearchController implements Initializable {
 
-    @FXML
-    private TextField keyword;
-    @FXML
-    private ChoiceBox type;
-    @FXML
-    private ChoiceBox alcoholContent;
-    @FXML
-    private ListView pastSearch;
-    @FXML
-    private ListView currentFilter;
+    private ObservableList<String> typeList = FXCollections.observableArrayList("All", "Beer", "Wine", "Hard Alcohol");
+    private ObservableList<String> contentList = FXCollections.observableArrayList("All", "20 <", "21-50", "51 >");
+    private ObservableList<String> pastList = FXCollections.observableArrayList("Vodka", "Gin", "Tequila", "Rum", "Mixers");
+    private ObservableList<String> currentList = FXCollections.observableArrayList("Sweet", "Dry", "Coconut", "cherry");
 
-    @FXML
-    private void initialize(){
-        type.setValue("All");
+    private MainController mainController;
+
+    @FXML private TextField keyword;
+    @FXML private ChoiceBox type;
+    @FXML private ChoiceBox alcoholContent;
+    @FXML private ListView pastSearch;
+    @FXML private ListView currentFilter;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources){
+        /*type.setValue("All");
         alcoholContent.setValue("All");
         type.setItems(typeList);
         alcoholContent.setItems(contentList);
         pastSearch.setItems(pastList);
-        currentFilter.setItems(currentList);
+        currentFilter.setItems(currentList);*/
 
+    }
+
+    public void setMainController(MainController mainController) {
+        this.mainController = mainController ;
     }
 
 }

@@ -8,6 +8,9 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.FXCollections ?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ComboBox?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.slackers.inc.sample.Controllers.SearchController">
    <children>
@@ -18,9 +21,25 @@
                        <Label layoutX="25.0" layoutY="29.0" text="Search" />
                        <TextField fx:id="keyword" layoutX="25.0" layoutY="50.0" opacity="0.5" text="Keyword" />
                        <Label layoutX="25.0" layoutY="117.0" text="Type" />
-                       <ChoiceBox fx:id="type" layoutX="25.0" layoutY="145.0" prefWidth="150.0" />
+                       <ComboBox layoutX="25.0" layoutY="145.0" prefWidth="150.0" >
+                           <items>
+                               <FXCollections fx:factory="observableArrayList">
+                                   <String fx:value="Beer" />
+                                   <String fx:value="Wine" />
+                                   <String fx:value="Liquor" />
+                               </FXCollections>
+                           </items>
+                       </ComboBox>
                        <Label layoutX="24.0" layoutY="214.0" text="Alcohol Content" />
-                       <ChoiceBox fx:id="alcoholContent" layoutX="25.0" layoutY="243.0" prefWidth="150.0" />
+                       <ComboBox layoutX="25.0" layoutY="243.0" prefWidth="150.0" >
+                            <items>
+                               <FXCollections fx:factory="observableArrayList">
+                                   <String fx:value="Beer" />
+                                   <String fx:value="Wine" />
+                                   <String fx:value="Liquor" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
                        <Label layoutX="24.0" layoutY="318.0" text="Filter Words" />
                        <TextField layoutX="25.0" layoutY="347.0" opacity="0.5" text="Keyword Filter" />
                        <Button layoutX="25.0" layoutY="516.0" mnemonicParsing="false" text="Search" />

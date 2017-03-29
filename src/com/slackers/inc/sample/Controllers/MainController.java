@@ -17,16 +17,24 @@ import java.util.ResourceBundle;
 public class MainController implements Initializable{
 
     @FXML private AnchorPane mainContainer;
-    @FXML private Pane search;
-    @FXML private Pane applications;
-    @FXML private Pane form;
+    @FXML private AnchorPane search;
+    @FXML private AnchorPane applications;
+    @FXML private AnchorPane form;
+
+    SearchController searchController;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("This is the main controller. Success!");
         try {
-            search = (Pane) FXMLLoader.load(getClass().getResource("../FXML/search.fxml"));
-            applications = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/applications.fxml"));
-            form = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/form.fxml"));
+            applications = FXMLLoader.load(getClass().getResource("../FXML/applications.fxml"));
+            form =  FXMLLoader.load(getClass().getResource("../FXML/form.fxml"));
+
+            FXMLLoader searchLoader = new FXMLLoader(getClass().getResource("../FXML/search.fxml"));
+            search = searchLoader.load();
+            SearchController searchController = searchLoader.getController();
+            searchController.setMainController(this);
 
             mainContainer.getChildren().setAll(applications);
         } catch (IOException e) {
