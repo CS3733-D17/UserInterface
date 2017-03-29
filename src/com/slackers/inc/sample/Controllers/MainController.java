@@ -19,6 +19,7 @@ public class MainController implements Initializable{
     @FXML private Pane search;
     @FXML private Pane applications;
     @FXML private Pane form;
+    @FXML private Pane results;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -26,6 +27,7 @@ public class MainController implements Initializable{
             search = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/search.fxml"));
             applications = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/applications.fxml"));
             form = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/form.fxml"));
+            results = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/results.fxml"));
 
             mainContainer.getChildren().setAll(applications);
         } catch (IOException e) {
@@ -48,6 +50,9 @@ public class MainController implements Initializable{
         mainContainer.getChildren().setAll(form);
     }
 
+    public void  resultsClick(){
+        mainContainer.getChildren().setAll(results);
+    }
 
 
 
