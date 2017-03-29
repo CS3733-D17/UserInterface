@@ -91,6 +91,13 @@
     -fx-padding: 0 8 0 8;
 }
 
+.sideicons{
+    -fx-text-fill: white;
+    -fx-font-family: "FontAwesome";
+    -fx-font-size: 26;
+    -fx-padding: 30 17 30 17;
+}
+
  /* RadioButton
  ******************************************************************************/
 
