@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
@@ -18,14 +19,12 @@ public class MainController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("This works");
-
         try {
             Pane search = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/search.fxml"));
             Pane applications = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/applications.fxml"));
             Pane form = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/form.fxml"));
 
-            mainContainer.getChildren().setAll(applications);
+            mainContainer.getChildren().setAll(form);
         } catch (IOException e) {
             e.printStackTrace();
         }

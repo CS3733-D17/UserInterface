@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -48,7 +49,10 @@
                      </image>
                   </ImageView>
                </children></AnchorPane>
-            <AnchorPane fx:id="mainContainer" prefHeight="720.0" prefWidth="1140.0" VBox.vgrow="ALWAYS" />
+            <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <AnchorPane fx:id="mainContainer" prefHeight="200.0" prefWidth="200.0" />
+               </content></ScrollPane>
          </children>
       </VBox>
    </children>
