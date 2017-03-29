@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
@@ -23,7 +24,7 @@ public class MainController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            search = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/search.fxml"));
+            search = (Pane) FXMLLoader.load(getClass().getResource("../FXML/search.fxml"));
             applications = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/applications.fxml"));
             form = (AnchorPane) FXMLLoader.load(getClass().getResource("../FXML/form.fxml"));
 
