@@ -13,9 +13,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.slackers.inc.sample.Controllers.ApplicationsController">
    <children>
-      <Accordion layoutX="32.0" layoutY="76.0" prefHeight="300.0" prefWidth="550.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="80.0" fx:id="accordionID">
+      <Accordion fx:id="accordionID" layoutX="32.0" layoutY="76.0" prefHeight="300.0" prefWidth="550.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="80.0">
         <panes>
-          <TitledPane animated="false" contentDisplay="RIGHT" graphicTextGap="300.0" text="Francois Special - Wine" fx:id="title1">
+          <TitledPane fx:id="title1" animated="false" contentDisplay="RIGHT" graphicTextGap="300.0" text="Francois Special - Wine">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -29,13 +29,13 @@
             </content>
 
           </TitledPane>
-          <TitledPane animated="false" contentDisplay="RIGHT" graphicTextGap="360.0" text="Fudliser - Beer" fx:id="title2">
+          <TitledPane fx:id="title2" animated="false" contentDisplay="RIGHT" graphicTextGap="360.0" text="Fudliser - Beer">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
 
           </TitledPane>
-          <TitledPane animated="false" contentDisplay="RIGHT" graphicTextGap="370.0" text="Lush - Vodka" fx:id="title3">
+          <TitledPane fx:id="title3" animated="false" contentDisplay="RIGHT" graphicTextGap="370.0" text="Lush - Vodka">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>

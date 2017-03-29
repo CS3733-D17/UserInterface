@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -11,7 +16,7 @@
 <?import javafx.collections.FXCollections ?>
 <?import java.lang.String?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.slackers.inc.sample.Controllers.FormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.slackers.inc.sample.Controllers.FormController">
    <children>
       <Label layoutX="59.0" layoutY="39.0" text="Applicant Information" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0">
          <font>
@@ -90,7 +95,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <ComboBox layoutX="270.0" layoutY="630.0" prefWidth="200.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="630.0" >
+      <ComboBox layoutX="270.0" layoutY="630.0" prefWidth="200.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="630.0">
           <items>
              <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Domestic" />
@@ -103,7 +108,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <ComboBox layoutX="280.0" layoutY="640.0" prefWidth="200.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="630.0" >
+      <ComboBox layoutX="280.0" layoutY="640.0" prefWidth="200.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="630.0">
           <items>
               <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Beer" />

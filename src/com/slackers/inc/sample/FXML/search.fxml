@@ -21,7 +21,7 @@
                        <Label layoutX="25.0" layoutY="29.0" text="Search" />
                        <TextField fx:id="keyword" layoutX="25.0" layoutY="50.0" opacity="0.5" text="Keyword" />
                        <Label layoutX="25.0" layoutY="117.0" text="Type" />
-                       <ComboBox layoutX="25.0" layoutY="145.0" prefWidth="150.0" >
+                       <ChoiceBox layoutX="25.0" layoutY="145.0" prefWidth="150.0" fx:id="alcoholContent">
                            <items>
                                <FXCollections fx:factory="observableArrayList">
                                    <String fx:value="Beer" />
@@ -29,9 +29,9 @@
                                    <String fx:value="Liquor" />
                                </FXCollections>
                            </items>
-                       </ComboBox>
+                       </ChoiceBox>
                        <Label layoutX="24.0" layoutY="214.0" text="Alcohol Content" />
-                       <ComboBox layoutX="25.0" layoutY="243.0" prefWidth="150.0" >
+                       <ChoiceBox layoutX="25.0" layoutY="243.0" prefWidth="150.0" fx:id="type">
                             <items>
                                <FXCollections fx:factory="observableArrayList">
                                    <String fx:value="Beer" />
@@ -39,7 +39,7 @@
                                    <String fx:value="Liquor" />
                                 </FXCollections>
                             </items>
-                        </ComboBox>
+                        </ChoiceBox>
                        <Label layoutX="24.0" layoutY="318.0" text="Filter Words" />
                        <TextField layoutX="25.0" layoutY="347.0" opacity="0.5" text="Keyword Filter" />
                        <Button layoutX="25.0" layoutY="516.0"  onAction="#getResultsClick" mnemonicParsing="false" text="Search" />

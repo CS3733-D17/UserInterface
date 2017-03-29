@@ -26,16 +26,21 @@ public class SearchController implements Initializable {
     @FXML private ListView pastSearch;
     @FXML private ListView currentFilter;
 
+    @FXML
+    private void getResultsClick(){
+
+    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
-        /*type.setValue("All");
+        type.setValue("All");
         alcoholContent.setValue("All");
         type.setItems(typeList);
         alcoholContent.setItems(contentList);
         pastSearch.setItems(pastList);
         currentFilter.setItems(currentList);
-*/
+
     }
 
     public void setMainController(MainController mainController) {
